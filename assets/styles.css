@@ -1,0 +1,27 @@
+.coding-assignment {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.CodeMirror {
+    border: 1px solid #ddd;
+    font-size: 16px;
+    height: auto;
+}
+
+#submit-code-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#assignment-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
