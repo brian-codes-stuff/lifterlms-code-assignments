@@ -82,6 +82,13 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+function enqueue_assignment_scripts() {
+    wp_enqueue_script('assignment-progress', plugin_dir_url(__FILE__) . 'assets/js/progress.js', array('jquery'), null, true);
+    wp_localize_script('assignment-progress', 'ajaxurl', array('ajax_url' => admin_url('admin-ajax.php')));
+}
+add_action('wp_enqueue_scripts', 'enqueue_assignment_scripts');
+
+
 // Include necessary files
 require_once plugin_dir_path(__FILE__) . 'includes/class-coding-assignment.php';
 require_once plugin_dir_path(__FILE__) . 'includes/class-submission-handler.php';
